@@ -7,8 +7,7 @@ export const EVENT = {
   dateLabel: "11 июля 2026 года",
   title: "Сказ о Зиле",
   titleSecond: "Прекрасной",
-  subtitle: "Череда забав да утех праздничных",
-  rsvpDeadline: "1 июля",
+  rsvpDeadline: "7 июля",
   // Портрет героини: положите файл в /public/assets/portrait.png
   portrait: "/assets/portrait.png",
 };

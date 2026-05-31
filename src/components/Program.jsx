@@ -6,7 +6,7 @@ export default function Program() {
   return (
     <Section>
       <SectionTitle>
-  <span className="text-4xl sm:text-5xl">Программа дня</span>
+  <span className="text-5xl sm:text-3xl">Череда забав да утех праздничных</span>
 </SectionTitle>
 
       <p className="mb-8 text-center font-body text-[20px] leading-relaxed text-[#4a3f2f]">
