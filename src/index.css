@@ -1,0 +1,109 @@
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/assets/fonts/CyrillicOld.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/assets/fonts/CyrillicOld.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("/assets/fonts/Ardeco.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("/assets/fonts/Ardeco.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Serif";
+  src: url("/assets/fonts/Ardeco.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Serif";
+  src: url("/assets/fonts/Ardeco.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Шрифты подключены в index.html (Google Fonts):
+   font-display → Playfair Display (заголовки)
+   font-accent  → Cormorant Garamond (курсивные акценты)
+   font-body    → PT Serif (основной текст, хорошо читается на мобильных) */
+
+:root {
+  color-scheme: light;
+  --paper-1: #f1e7d1;
+  --paper-2: #e0cda0;
+}
+
+* { -webkit-tap-highlight-color: transparent; }
+body { margin: 0; }
+
+/* ════════════════════════════════════════════════════
+   ТЕКСТУРА ПЕРГАМЕНТА
+   Процедурная (SVG-шум) — работает без файлов.
+   Чтобы заменить своей картинкой: положите /public/assets/bg.jpg
+   и используйте «ВАРИАНТ Б» ниже вместо этого блока.
+   ════════════════════════════════════════════════════ */
+/*.parchment {
+  background-color: #f3e4c1;
+  background-image:
+    /* тёплый свет сверху */
+    /*radial-gradient(135% 75% at 50% -8%, rgba(255,250,236,0.55), rgba(255,250,236,0) 55%),
+    /* мягкое затемнение снизу */
+   /* radial-gradient(150% 120% at 50% 115%, rgba(133, 92, 42, 0.2), rgba(96,64,26,0) 60%),
+    /* лёгкая виньетка по краям 
+    radial-gradient(115% 130% at 50% 50%, rgba(0,0,0,0) 62%, rgba(78,52,20,0.16) 100%),
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22800%22%3E%3Cfilter%20id%3D%22f%22%3E%3CfeTurbulence%20type%3D%22turbulence%22%20baseFrequency%3D%220.006%200.011%22%20numOctaves%3D%225%22%20seed%3D%2214%22%20stitchTiles%3D%22stitch%22%2F%3E%3CfeColorMatrix%20type%3D%22matrix%22%20values%3D%220%200%200%200%200.42%200%200%200%200%200.30%200%200%200%200%200.15%200%200%200%200.5%200%22%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20filter%3D%22url%28%23f%29%22%2F%3E%3C%2Fsvg%3E"),
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22400%22%20height%3D%22400%22%3E%3Cfilter%20id%3D%22m%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.12%22%20numOctaves%3D%223%22%20seed%3D%227%22%20stitchTiles%3D%22stitch%22%2F%3E%3CfeColorMatrix%20type%3D%22matrix%22%20values%3D%220%200%200%200%200.35%200%200%200%200%200.26%200%200%200%200%200.12%200%200%200%200.13%200%22%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20filter%3D%22url%28%23m%29%22%2F%3E%3C%2Fsvg%3E"),
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22180%22%20height%3D%22180%22%3E%3Cfilter%20id%3D%22g%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.85%22%20numOctaves%3D%222%22%20seed%3D%223%22%20stitchTiles%3D%22stitch%22%2F%3E%3CfeColorMatrix%20type%3D%22matrix%22%20values%3D%220%200%200%200%200.25%200%200%200%200%200.18%200%200%200%200%200.08%200%200%200%200.08%200%22%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20filter%3D%22url%28%23g%29%22%2F%3E%3C%2Fsvg%3E");
+  background-size: cover, cover, cover, 800px 800px, 400px 400px, 180px 180px;
+  background-position: center;
+  background-attachment: scroll;
+}*/
+
+/*/*ВАРИАНТ Б — своя картинка-фон (раскомментируйте и удалите .parchment выше):*/
+.parchment {
+  background-color: #f6e5bfb2;
+  background-image:
+    linear-gradient(rgba(236,220,182,0.85), rgba(224,205,160,0.55)),
+    url("/assets/bg.png");
+  background-repeat: no-repeat, repeat;
+  background-size: cover, 800px;
+  background-position: center;
+}
+/* Затемнённый «пергамент» для КРАСНЫХ секций (RSVP «Молвите слово» и футер) */
+.parchment-dark {
+  background-color: #7b1518;
+  background-image:
+    radial-gradient(130% 90% at 50% -5%, rgba(255,220,150,0.12), rgba(255,220,150,0) 55%),
+    radial-gradient(120% 120% at 50% 120%, rgba(0,0,0,0.28), rgba(0,0,0,0) 60%),
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200%22%20height%3D%22200%22%3E%3Cfilter%20id%3D%22d%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.6%22%20numOctaves%3D%223%22%20seed%3D%229%22%20stitchTiles%3D%22stitch%22%2F%3E%3CfeColorMatrix%20type%3D%22matrix%22%20values%3D%220%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.13%200%22%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20filter%3D%22url%28%23d%29%22%2F%3E%3C%2Fsvg%3E");
+  background-size: cover, cover, 200px 200px;
+  background-position: center;
+}
+
+/* Скрываем полосу прокрутки у карусели, сохраняя свайп */
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
