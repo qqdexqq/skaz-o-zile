@@ -40,12 +40,12 @@ async function handleSubmit() {
       <Section className="parchment-dark text-center">
         <PartyPopper className="mx-auto mb-3 text-[#E0B45C]" size={40} />
         <h2 className="font-display text-3xl font-bold text-[#F4E9D0]">
-          Благодарствуем, {name.trim().split(" ")[0]}!
+          Благодарствую, {name.trim().split(" ")[0]}!
         </h2>
         <p className="mt-2 font-accent text-lg italic text-[#E0B45C]">
           {attending
-            ? "Ждём вашу милость на пиру!"
-            : "Кланяемся низко и шлём привет издалека."}
+            ? "Жду вашу милость на пиру!"
+            : "Кланяюсь низко и шлю привет издалека."}
         </p>
       </Section>
     );
@@ -58,9 +58,9 @@ async function handleSubmit() {
       </SectionTitle>
 
       <p className="mb-7 text-center font-body text-[18px] leading-relaxed text-[#F4E9D0]/85">
-        Дабы столы ломились от угощений, а чаши были полны, просим дать ответ до{" "}
+        Дабы столы ломились от угощений, а чаши были полны, прошу дать ответ до{" "}
         <span className="font-semibold text-[#E0B45C]">{EVENT.rsvpDeadline}</span>,
-        явится ли ваша милость на наше празднество.
+        явится ли ваша милость на мое празднество.
       </p>
 
       <div className="mx-auto max-w-sm space-y-4">

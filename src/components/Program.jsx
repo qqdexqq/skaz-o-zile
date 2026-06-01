@@ -10,7 +10,7 @@ export default function Program() {
 </SectionTitle>
 
       <p className="mb-8 text-center font-body text-[20px] leading-relaxed text-[#4a3f2f]">
-        Дорогие да любимые гости! Ждём вас на нашем пиру. Ознакомьтесь с
+        Дорогие да любимые гости! Жду вас на моем пиру. Ознакомьтесь с
         расписанием дня, дабы ни одной забавы приметной не пропустить.
       </p>
 

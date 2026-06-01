@@ -42,7 +42,7 @@ export default function Gifts() {
         </div>
 
         <div className="mt-3 flex items-center justify-center gap-1.5 font-accent text-sm italic text-[#6b5d48]">
-          <Flower2 size={14} /> Цветы просим заменить добром
+          <Flower2 size={14} /> Цветы прошу заменить добром
         </div>
 
         <a

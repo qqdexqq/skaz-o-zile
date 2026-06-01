@@ -27,7 +27,7 @@ export default function App() {
             Сказ о Зиле Прекрасной
           </p>
           <p className="mt-1 font-accent text-sm italic text-[#F4E9D0]/60">
-            Ждём вас на нашем пиру
+            Жду вас на моем пиру
           </p>
         </footer>
       </div>
